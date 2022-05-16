@@ -8,8 +8,8 @@ import android.widget.EditText;
 public class logIn extends AppCompatActivity {
 
     // variable section
-    EditText userName = findViewById(R.id.UserName);
-    EditText password = findViewById(R.id.Password);
+    EditText userName = findViewById(R.id.logInUserName);
+    EditText password = findViewById(R.id.logInPassword);
     Button go = findViewById(R.id.Login);
 
     @Override
