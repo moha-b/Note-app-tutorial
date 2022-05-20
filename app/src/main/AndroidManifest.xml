@@ -11,7 +11,7 @@
         android:theme="@style/Theme.NoteApp">
         <activity android:name=".Registration"></activity>
         <activity
-            android:name=".splash_screen"
+            android:name=".Intro"
             android:exported="true"
             android:theme="@style/splashScreen">
             <intent-filter>

@@ -5,15 +5,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
-public class Registration extends AppCompatActivity {
+public class Intro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
-
+        setContentView(R.layout.activity_intro);
 
     }
     public void replace(Fragment fragment){
