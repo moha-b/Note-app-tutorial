@@ -8,10 +8,6 @@
 
 
 
-
-
-
-
     <!-- Navigation  bottom -->
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:layout_width="match_parent"
