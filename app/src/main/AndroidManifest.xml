@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteApp">
-
+        <activity android:name=".Registration"></activity>
         <activity
             android:name=".splash_screen"
-            android:theme="@style/splashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Home" />
-        <activity android:name=".signIn" />
-        <activity android:name=".logIn"/>
     </application>
 
 </manifest>
