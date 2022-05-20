@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="Home"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/profile"
+        android:icon="@drawable/ic_outline_person_24"
+        android:title="@string/profile"
+
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/sitting"
+        android:icon="@drawable/ic_outline_settings_24"
+        android:title="sitting"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/search"
+        android:icon="@drawable/ic_outline_search_24"
+        android:title="search"
+        app:showAsAction="ifRoom"/>
+
+</menu>

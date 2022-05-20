@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteApp">
-        <activity android:name=".signIn"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".splash_screen"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".signIn" />
+        <activity android:name=".logIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

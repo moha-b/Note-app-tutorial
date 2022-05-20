@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded"
             android:textColor="@color/white"
-            android:text="Login" />
+            android:text="etfadal" />
     </RelativeLayout>
 
 

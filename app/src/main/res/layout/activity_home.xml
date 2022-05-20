@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+
+
+
+
+
+
+
+
+    <!-- Navigation  bottom -->
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nav"
+        app:mbn_backgroundBottomColor="#00b578"
+        app:mbn_circleColor="@color/white"
+        app:mbn_selectedIconColor="#00b578"
+        app:mbn_defaultIconColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>
+
+<!---<androidx.coordinatorlayout.widget.CoordinatorLayout
+android:layout_width="match_parent"
+android:layout_height="90dp"
+android:layout_alignParentEnd="true"
+android:layout_alignParentBottom="true"
+    >
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_round_add_24"
+    app:maxImageSize="30dp"
+    android:backgroundTint="#00b578"
+    app:layout_anchor="@id/appBar"
+
+
+    tools:ignore="ContentDescription" />
+
+<com.google.android.material.bottomappbar.BottomAppBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:id="@+id/appBar"
+    app:fabCradleRoundedCornerRadius="30dp"
+    app:fabCradleMargin="10dp"
+    >
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/nav_menu"
+        />
+
+</com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>-->

@@ -10,14 +10,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/center"
+        android:id="@+id/singUpCenter"
         android:layout_centerInParent="true">
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/center"
+        android:layout_above="@+id/singUpCenter"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="150dp"
@@ -44,14 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_above="@+id/center"
+        android:layout_above="@+id/singUpCenter"
         android:id="@+id/email"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         >
 
         <EditText
-            android:id="@+id/signUPUserName"
+            android:id="@+id/signUpUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="el username ya wa74"
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_below="@+id/center"
+        android:layout_below="@+id/singUpCenter"
         android:id="@+id/Password"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
