@@ -2,6 +2,7 @@ package com.example.noteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -12,8 +13,12 @@ public class splash_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-//        new Handler().postDelayed(Runnable(){
-//
-//        });
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(splash_screen.this,logIn.class));
+                finish();
+            }
+        },3000);
     }
 }
