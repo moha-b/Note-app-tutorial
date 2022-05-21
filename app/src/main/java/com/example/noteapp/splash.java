@@ -1,29 +1,33 @@
 package com.example.noteapp;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-public class splash extends Fragment {
-    View view;
+public class splash extends AppCompatActivity {
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_splash, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_intro);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //startActivity(new Intent(splash.this,Registration.class));
-                //finish();
+                startActivity(new Intent(splash.this,splash.class));
+                finish();
             }
         },4000);
-
-        return view;
+    }
+    public void replace(Fragment fragment){
+        FragmentManager fg = getSupportFragmentManager();
+        FragmentTransaction ft = fg.beginTransaction();
+        ft.replace(R.id.main,fragment);
+        ft.commit();
     }
 }
