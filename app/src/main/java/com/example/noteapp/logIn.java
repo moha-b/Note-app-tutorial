@@ -2,11 +2,13 @@ package com.example.noteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class logIn extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class logIn extends AppCompatActivity {
         EditText userName = findViewById(R.id.logInUserName);
         EditText password = findViewById(R.id.logInPassword);
         Button go = findViewById(R.id.Login);
+        TextView create = findViewById(R.id.create_account);
 
         // go to home page
         go.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +38,15 @@ public class logIn extends AppCompatActivity {
 //                }
 
                 Intent intent = new Intent(logIn.this,Home.class);
+                startActivity(intent);
+            }
+        });
+
+
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(logIn.this,signUp.class);
                 startActivity(intent);
             }
         });

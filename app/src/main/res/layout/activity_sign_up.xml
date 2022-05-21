@@ -93,6 +93,7 @@
         android:layout_marginLeft="55dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="60dp"
+        android:id="@+id/singUp_layout"
         android:layout_below="@+id/Password">
         <Button
             android:id="@+id/signUp"
@@ -102,5 +103,23 @@
             android:textColor="@color/white"
             android:text="Sign Up" />
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/go_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singUp_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginBottom="96dp"
+        android:text="Login men hena"
+        android:textAlignment="center"
+        android:textColor="#4aba95"
+        android:textSize="20sp" />
+
 
 </RelativeLayout>
