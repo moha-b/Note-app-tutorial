@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteApp">
         <activity android:name=".intro"></activity>
-        <activity android:name=".Registration" />
         <activity
             android:name=".splash"
             android:exported="true"

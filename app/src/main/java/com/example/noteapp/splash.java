@@ -14,20 +14,15 @@ public class splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_splash);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(splash.this,splash.class));
+                startActivity(new Intent(splash.this,Home.class));
                 finish();
             }
         },4000);
     }
-    public void replace(Fragment fragment){
-        FragmentManager fg = getSupportFragmentManager();
-        FragmentTransaction ft = fg.beginTransaction();
-        ft.replace(R.id.main,fragment);
-        ft.commit();
-    }
+
 }

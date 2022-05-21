@@ -16,7 +16,7 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder> {
     }
     @Override
     public SliderAdapter.Holder onCreateViewHolder(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.slider_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_intro,parent,false);
         return new Holder(view);
     }
 
@@ -30,7 +30,7 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder> {
         return images.length;
     }
 
-    public class Holder extends SliderViewAdapter.ViewHolder{
+    public static class Holder extends SliderViewAdapter.ViewHolder{
 
         ImageView image;
         public Holder(View itemView) {

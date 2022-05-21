@@ -1,31 +1,42 @@
 package com.example.noteapp;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class logIn extends Fragment {
+public class logIn extends AppCompatActivity {
 
-    View view;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_log_in, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_log_in);
 
-        EditText userName = view.findViewById(R.id.logInUserName);
-        EditText password = view.findViewById(R.id.logInPassword);
-        Button go = view.findViewById(R.id.Login);
+        // variable section
+        EditText userName = findViewById(R.id.logInUserName);
+        EditText password = findViewById(R.id.logInPassword);
+        Button go = findViewById(R.id.Login);
 
+        // go to home page
+        go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        return view;
+                String user = userName.getText().toString();
+                String userPassword = password.getText().toString();
+
+//                if (user.isEmpty() || userPassword.isEmpty()){
+//                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();
+//                }else{
+//                    connection with SQLite
+//                }
+
+                Intent intent = new Intent(logIn.this,Home.class);
+                startActivity(intent);
+            }
+        });
     }
-
-
 }

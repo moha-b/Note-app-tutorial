@@ -1,9 +1,15 @@
 package com.example.noteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -19,10 +25,6 @@ public class Home extends AppCompatActivity {
 
 
 
-
-
-
-
         // Navigation bar
         MeowBottomNavigation nav = findViewById(R.id.nav);
         nav.add(new MeowBottomNavigation.Model(1,R.drawable.ic_outline_person_24));
@@ -34,7 +36,6 @@ public class Home extends AppCompatActivity {
             public void onClickItem(MeowBottomNavigation.Model item) {
                 switch (item.getId()){
                     case 1:
-
                         break;
                     case 2:
                         Intent intent = new Intent(Home.this,Home.class);
@@ -56,59 +57,11 @@ public class Home extends AppCompatActivity {
             }
         });
 
-
-
+    }
+    public void replace(Fragment fragment, int layout){
+        FragmentManager fg = getSupportFragmentManager();
+        FragmentTransaction ft = fg.beginTransaction();
+        ft.replace(layout,fragment);
+        ft.commit();
     }
 }
-
-// login class
-/*
-* // variable section
-
-
-        // go to home page
-        go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String user = userName.getText().toString();
-                String userPassword = password.getText().toString();
-
-//                if (user.isEmpty() || userPassword.isEmpty()){
-//                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();
-//                }else{
-//                    connection with SQLite
-//                }
-
-                Intent intent = new Intent(logIn.this,Home.class);
-                startActivity(intent);
-            }
-        });
-*/
-
-// signUp class
-/*
-*
-        // variable section
-        EditText signUpUserName = findViewById(R.id.signUpUserName);
-        EditText signUpPassword = findViewById(R.id.signUpPassword);
-        Button go = findViewById(R.id.signUp);
-
-        // go to home page
-        go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String user = signUpUserName.getText().toString();
-                String userPassword = signUpPassword.getText().toString();
-
-//                if (user.isEmpty() || userPassword.isEmpty()){
-//                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();
-//                }else{
-//                    connection with firebase
-//                }
-
-                //Intent intent = new Intent(signIn.this,home.class);
-                //startActivity(intent);
-            }
-        });
-*/
