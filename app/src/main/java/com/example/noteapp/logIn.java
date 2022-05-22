@@ -28,8 +28,8 @@ public class logIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String user = userName.getText().toString();
-                String userPassword = password.getText().toString();
+                String user = userName.getText().toString().trim();
+                String userPassword = password.getText().toString().trim();
 
 //                if (user.isEmpty() || userPassword.isEmpty()){
 //                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();

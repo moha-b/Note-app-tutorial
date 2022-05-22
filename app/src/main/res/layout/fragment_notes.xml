@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:focusable="true"
         android:layout_marginBottom="40dp"
         android:layout_marginRight="40dp"
         android:src="@drawable/ic_round_add_24"

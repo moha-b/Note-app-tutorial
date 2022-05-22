@@ -3,6 +3,8 @@ package com.example.noteapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,5 +19,11 @@ public class profile extends Fragment {
         view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         return view;
+    }
+    public void replace(Fragment fragment, int layout){
+        FragmentManager fg = requireActivity().getSupportFragmentManager();
+        FragmentTransaction ft = fg.beginTransaction();
+        ft.replace(layout,fragment);
+        ft.commit();
     }
 }
