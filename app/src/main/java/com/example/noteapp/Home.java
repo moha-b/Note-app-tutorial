@@ -24,7 +24,6 @@ public class Home extends AppCompatActivity {
     FloatingActionButton fab ;
     RecyclerView recyclerView;
 
-    int i =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,11 +62,11 @@ public class Home extends AppCompatActivity {
                         fab.hide();
                         break;
                     case 2:
-                        //replace(new createNote(),R.id.fragment);
+                        startActivity(new Intent(Home.this,Home.class));
                         fab.show();
                         break;
                     case 3:
-                        //startActivity(intent);
+                        replace(new settings(),R.id.fragment);
                         fab.hide();
                         break;
                     default:
