@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.noteapp">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteApp">
+        <activity android:name=".createNote"></activity>
         <activity
             android:name=".splash"
             android:exported="true"
@@ -20,9 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Home" />
-        <activity android:name=".intro"/>
-        <activity android:name=".logIn"/>
-        <activity android:name=".signUp"/>
+        <activity android:name=".intro" />
+        <activity android:name=".logIn" />
+        <activity android:name=".signUp" />
     </application>
 
 </manifest>

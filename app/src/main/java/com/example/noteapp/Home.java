@@ -1,29 +1,54 @@
 package com.example.noteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
-import android.view.LayoutInflater;
 import android.view.View;
 
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.LinkedList;
+import java.util.List;
 
 
 public class Home extends AppCompatActivity {
 
+    FloatingActionButton fab ;
+    RecyclerView recyclerView;
+
+    int i =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
 
-        // Navigation bar
+        recyclerView = findViewById(R.id.notes);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        notesAdapter adapter = new notesAdapter(item);
+//        recyclerView.setAdapter(adapter);
+
+
+        // TODO: Float Action Button Declaration & Action
+        fab = findViewById(R.id.add_note);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,createNote.class));
+                //replace(new createNote(),R.id.fragment);
+            }
+        });
+
+
+        // TODO: Navigation bar Declaration & Action
         MeowBottomNavigation nav = findViewById(R.id.nav);
         nav.add(new MeowBottomNavigation.Model(1,R.drawable.ic_outline_person_24));
         nav.add(new MeowBottomNavigation.Model(2,R.drawable.ic_outline_home_24));
@@ -35,13 +60,15 @@ public class Home extends AppCompatActivity {
                 switch (item.getId()){
                     case 1:
                         replace(new profile(),R.id.fragment);
+                        fab.hide();
                         break;
                     case 2:
-                        replace(new Notes(),R.id.fragment);
+                        //replace(new createNote(),R.id.fragment);
+                        fab.show();
                         break;
                     case 3:
-                        //Intent intent = new Intent(Home.this,signIn.class);
                         //startActivity(intent);
+                        fab.hide();
                         break;
                     default:
                         break;
