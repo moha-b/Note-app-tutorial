@@ -18,10 +18,10 @@ public class logIn extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
 
         // variable section
-        EditText userName = findViewById(R.id.logInUserName);
+        EditText userName = findViewById(R.id.logInEmail);
         EditText password = findViewById(R.id.logInPassword);
-        Button go = findViewById(R.id.Login);
-        TextView create = findViewById(R.id.create_account);
+        Button go = findViewById(R.id.singIn);
+        TextView create = findViewById(R.id.goSingUp);
 
         // go to home page
         go.setOnClickListener(new View.OnClickListener() {

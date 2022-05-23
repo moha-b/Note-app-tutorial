@@ -1,119 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".logIn">
-
+    tools:context=".logIn"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:background="@color/green">
+    <!-- TODO: Upper part  -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/center"
-        android:layout_centerInParent="true">
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/back_icon"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="14dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:text="Welcome Back"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="We missed you! Login to get started"
+                android:textColor="@color/white"/>
+        </LinearLayout>
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="150dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ehh yasta 3amel ehh?"
-            android:textColor="#4aba95"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="3ayz te login yasta!"
-            android:textSize="23sp"
-            android:textColor="#F9AA33"
-            />
-
-
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/center"
-        android:id="@+id/email"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        >
-
-        <EditText
-            android:id="@+id/logInUserName"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="el username ya wa74"
-            android:inputType="textPersonName"
-            android:textColorHint="#4aba95"
-            android:background="@drawable/rounded_outline"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/center"
-        android:id="@+id/Password"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        app:passwordToggleEnabled="true"
-        >
-
-        <EditText
-            android:id="@+id/logInPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="wel password bardo belmarra"
-            android:inputType="textPassword"
-            android:textColorHint="#4aba95"
-            android:background="@drawable/rounded_outline"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
+    <!-- TODO: Lower part  -->
     <RelativeLayout
+        android:elevation="36dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/bottom"
-        android:layout_below="@+id/Password">
-        <Button
-            android:id="@+id/Login"
-            android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_filled"
-            android:textColor="@color/white"
-            android:text="etfadal" />
+            android:textColor="@color/green"
+            android:textSize="26sp"
+            android:text="LOGIN"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="48dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="132dp"
+            android:layout_marginEnd="0dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/rounded_outline"
+                android:drawableEnd="@drawable/user_icon"
+                android:hint="someone@gmail.com"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/green"
+                android:id="@+id/logInEmail"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/rounded_outline"
+                android:drawableEnd="@drawable/lock_icon"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:id="@+id/logInPassword"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="48dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:text="Need Help?"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_filled"
+                    android:text="Sign In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:id="@+id/singIn"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="162dp"
+            android:layout_marginBottom="90dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Don't have an account?"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="Register instead"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:id="@+id/goSingUp"/>
+        </LinearLayout>
     </RelativeLayout>
-
-
-    <TextView
-        android:id="@+id/create_account"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="60dp"
-        android:layout_below="@id/bottom"
-        android:text="t3mel account yasta ?"
-        android:textAlignment="center"
-        android:textColor="#4aba95"
-        android:textSize="20sp" />
-
-</RelativeLayout>
+</LinearLayout>

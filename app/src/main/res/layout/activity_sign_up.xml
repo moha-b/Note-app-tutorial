@@ -1,125 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f9f9f9"
-    tools:context=".signUp">
-
+    tools:context=".logIn"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:background="@color/white">
+    <!-- TODO: Upper part  -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/singUpCenter"
-        android:layout_centerInParent="true">
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/back_icon_sign_up"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="14dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:text="Hello there"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/green"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="we hope you enjoy with us"
+                android:textColor="@color/green"/>
+        </LinearLayout>
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/singUpCenter"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="150dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="mnwar el app y5oya♥"
-            android:textColor="#4aba95"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="me4rfna"
-            android:textSize="23sp"
-            android:textColor="#F9AA33"
-            />
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/singUpCenter"
-        android:id="@+id/email"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        >
-
-        <EditText
-            android:id="@+id/signUpUserName"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:hint="el username ya wa74"
-            android:inputType="textPersonName"
-            android:textColorHint="#4aba95"
-            android:background="@drawable/rounded_outline"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/singUpCenter"
-        android:id="@+id/Password"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/green"
-        >
-
-        <EditText
-            android:id="@+id/signUpPassword"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:hint="wel password bardo belmarra"
-            android:inputType="textPassword"
-            android:textColorHint="#4aba95"
-            android:background="@drawable/rounded_outline"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
+    <!-- TODO: Lower part  -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="60dp"
-        android:id="@+id/singUp_layout"
-        android:layout_below="@+id/Password">
-        <Button
-            android:id="@+id/signUp"
-            android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background_sing_up"
+        android:elevation="36dp">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_filled"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="36dp"
+            android:text="SIGN UP"
             android:textColor="@color/white"
-            android:text="Sign Up" />
+            android:textSize="26sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="132dp"
+            android:layout_marginEnd="0dp"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/signUpName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/rounded_outline"
+                android:drawableEnd="@drawable/user_icon"
+                android:hint="Name"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/green" />
+
+            <EditText
+                android:id="@+id/signUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_outline"
+                android:drawableEnd="@drawable/email"
+                android:hint="someone@gmail.com"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/green" />
+
+            <EditText
+                android:id="@+id/signUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/rounded_outline"
+                android:drawableEnd="@drawable/lock_icon"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="48dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:text="Need Help?"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/signUp"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_outline"
+                    android:text="Sign up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="162dp"
+            android:layout_marginBottom="90dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="I already got one"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/goLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="login instead"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/go_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/singUp_layout"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="-6dp"
-        android:layout_marginBottom="96dp"
-        android:text="Login men hena"
-        android:textAlignment="center"
-        android:textColor="#4aba95"
-        android:textSize="20sp" />
-
-
-</RelativeLayout>
+</LinearLayout>

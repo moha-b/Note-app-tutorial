@@ -25,10 +25,10 @@ public class signUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         // variable section
-        EditText signUpUserName = findViewById(R.id.signUpUserName);
+        EditText signUpUserName = findViewById(R.id.signUpEmail);
         EditText signUpPassword = findViewById(R.id.signUpPassword);
         Button go = findViewById(R.id.signUp);
-        TextView create = findViewById(R.id.go_login);
+        TextView create = findViewById(R.id.goLogin);
 
        // firebaseAuth = firebaseAuth.getInstance();
 
