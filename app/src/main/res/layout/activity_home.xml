@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <!-- # TODO: fragment layout  -->
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/fragment"
-    >
-</RelativeLayout>
-
     <!-- TODO: Float Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_note"
@@ -30,18 +22,23 @@
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <!-- TODO: Recycler View -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:scrollbars="vertical">
     </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
+
+    <!-- # TODO: fragment layout  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment"
+        >
+    </RelativeLayout>
 
     <!-- TODO:  Navigation  bottom -->
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation

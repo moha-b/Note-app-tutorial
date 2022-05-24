@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 
 public class Home extends AppCompatActivity {
@@ -32,20 +34,18 @@ public class Home extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         Notes[] notes = new Notes[]{
                 new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
-                new Notes("Greetings","Hello World"),
+                new Notes("Valorant","main kj, chamber maybe sage or kay/o"),
+                new Notes("this just a shit","Completely uesless note with no goal"),
+                new Notes("hmmmm","qew"),
+                new Notes("hmmmm","sdadad"),
+                new Notes("hmmmm","hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"),
+                new Notes("hmmmm","hmmmmmmmmmmmeeemmmmssasdasdmmmmmmmmmmmmmmmmmmmmm"),
+                new Notes("hmmmm","hmmmmmmmmmaaaaaaaaaaaaaaaaaaaaammmmmmmmmmmmmmmmmmmmmmmmmm"),
+                new Notes("hmmmm","hmmmmmmmmmmmmmmssssssmmmmmmmmmmmmmmmmmmmmmmmm"),
+                new Notes("hmmmm","hmmmmmmmmmmmmmmmmmmmmmmmmmmmm"),
 
         };
 
@@ -79,7 +79,6 @@ public class Home extends AppCompatActivity {
                 switch (item.getId()){
                     case 1:
                         replace(new profile(),R.id.fragment);
-
                         fab.hide();
                         break;
                     case 2:
@@ -109,4 +108,5 @@ public class Home extends AppCompatActivity {
         ft.replace(layout,fragment);
         ft.commit();
     }
+
 }

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="5dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="11dp"
+        android:layout_margin="8dp"
         app:cardMaxElevation="5dp"
-        android:id="@+id/note_layout">
+        android:id="@+id/notes_layout">
 
         <!--  note content  -->
         <LinearLayout
@@ -30,6 +32,8 @@
                     android:id="@+id/note_title"
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
                     android:paddingRight="10dp"
                     android:textSize="30sp"
                     android:layout_weight="1"
@@ -48,13 +52,15 @@
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/note_content"
                 android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="20dp"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:ellipsize="marquee"
                 android:textSize="20sp"
                 >
 
