@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class signUp extends AppCompatActivity {
 
-
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,33 +30,34 @@ public class signUp extends AppCompatActivity {
         Button go = findViewById(R.id.signUp);
         TextView create = findViewById(R.id.goLogin);
 
-       // firebaseAuth = firebaseAuth.getInstance();
+        firebaseAuth = firebaseAuth.getInstance();
 
         // go to home page
+         // trim -> remove spaces
+
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = signUpUserName.getText().toString();
-                String userPassword = signUpPassword.getText().toString();
+                String user = signUpUserName.getText().toString().trim();
+                String userPassword = signUpPassword.getText().toString().trim();
 
 //                if (user.isEmpty() || userPassword.isEmpty()){
 //                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();
 //                }else{
 ////                    connection with firebase
-//                      firebaseAuth.createUserWithEmailAndPassword(user,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                          @Override
-//                          public void onComplete(@NonNull Task<AuthResult> task){
-//                              if (task.isSuccessful()){
-//                                  Toast.makeText(getApplicationContext(),"Gamed",Toast.LENGTH_SHORT).show();
-//                                  startActivity(new Intent(signUp.this,Home.class));
-//                              }else {
-//                                  Toast.makeText(getApplicationContext(),"fe 7ahgh 5lat",Toast.LENGTH_SHORT).show();
-//                              }
-////                          }
-//                      });
-//                }
-
+                firebaseAuth.createUserWithEmailAndPassword(user, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Gamed", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(signUp.this, Home.class));
+                        } else {
+                            Toast.makeText(getApplicationContext(), "fe 7ahgh 5lat", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
+
         });
 
         create.setOnClickListener(new View.OnClickListener() {

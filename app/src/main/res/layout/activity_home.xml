@@ -8,8 +8,8 @@
 
     <!-- # TODO: fragment layout  -->
 <RelativeLayout
-    android:layout_width="260dp"
-    android:layout_height="683dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:id="@+id/fragment"
     >
 </RelativeLayout>
@@ -30,15 +30,18 @@
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notes"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:scrollbars="vertical">
-
     </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 
     <!-- TODO:  Navigation  bottom -->
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation

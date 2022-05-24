@@ -30,10 +30,31 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-        recyclerView = findViewById(R.id.notes);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        notesAdapter adapter = new notesAdapter(item);
-//        recyclerView.setAdapter(adapter);
+        Notes[] notes = new Notes[]{
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+                new Notes("Greetings","Hello World"),
+
+        };
+
+        Adapter adapter = new Adapter(notes,Home.this);
+        recyclerView.setAdapter(adapter);
+
+
+
+
 
 
         // TODO: Float Action Button Declaration & Action
@@ -45,7 +66,6 @@ public class Home extends AppCompatActivity {
                 //replace(new createNote(),R.id.fragment);
             }
         });
-
 
         // TODO: Navigation bar Declaration & Action
         MeowBottomNavigation nav = findViewById(R.id.nav);
@@ -59,6 +79,7 @@ public class Home extends AppCompatActivity {
                 switch (item.getId()){
                     case 1:
                         replace(new profile(),R.id.fragment);
+
                         fab.hide();
                         break;
                     case 2:
