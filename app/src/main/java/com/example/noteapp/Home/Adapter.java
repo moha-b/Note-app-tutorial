@@ -1,8 +1,7 @@
-package com.example.noteapp;
+package com.example.noteapp.Home;
 
 import android.content.Context;
 import android.os.Build;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +12,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.noteapp.Notes;
+import com.example.noteapp.R;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    Notes[] Notes;
-    Context context;
+    com.example.noteapp.Notes[] Notes;
+    home context;
 
-    public Adapter(Notes[] Notes, Home activity) {
+    public Adapter(Notes[] Notes, home activity) {
         this.Notes = Notes;
         this.context = activity;
     }

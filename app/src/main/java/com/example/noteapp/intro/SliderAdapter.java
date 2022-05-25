@@ -1,11 +1,11 @@
-package com.example.noteapp;
+package com.example.noteapp.intro;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.smarteist.autoimageslider.SliderView;
+import com.example.noteapp.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 public class SliderAdapter extends SliderViewAdapter<SliderAdapter.Holder> {

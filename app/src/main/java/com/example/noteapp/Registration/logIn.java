@@ -1,14 +1,16 @@
-package com.example.noteapp;
+package com.example.noteapp.Registration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.noteapp.Home.Main;
+import com.example.noteapp.R;
 
 public class logIn extends AppCompatActivity {
 
@@ -37,7 +39,7 @@ public class logIn extends AppCompatActivity {
 //                    connection with SQLite
 //                }
 
-                Intent intent = new Intent(logIn.this,Home.class);
+                Intent intent = new Intent(logIn.this, Main.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +48,7 @@ public class logIn extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(logIn.this,signUp.class);
+                Intent intent = new Intent(logIn.this, signUp.class);
                 startActivity(intent);
             }
         });

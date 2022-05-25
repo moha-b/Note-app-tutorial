@@ -13,7 +13,7 @@
         android:theme="@style/Theme.NoteApp">
         <activity android:name=".createNote"></activity>
         <activity
-            android:name=".splash"
+            android:name=".intro.splash"
             android:exported="true"
             android:theme="@style/splashScreen">
             <intent-filter>
@@ -22,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
-        <activity android:name=".intro" />
-        <activity android:name=".logIn" />
-        <activity android:name=".signUp" />
+        <activity android:name=".Home.Main" />
+        <activity android:name=".intro.introduction" />
+        <activity android:name=".Registration.logIn" />
+        <activity android:name=".Registration.signUp" />
     </application>
 
 </manifest>

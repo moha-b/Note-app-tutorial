@@ -1,4 +1,4 @@
-package com.example.noteapp;
+package com.example.noteapp.Home;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toolbar;
 
+import com.example.noteapp.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class profile extends Fragment {

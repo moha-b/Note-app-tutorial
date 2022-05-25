@@ -1,13 +1,13 @@
-package com.example.noteapp;
+package com.example.noteapp.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.noteapp.R;
+import com.example.noteapp.Registration.logIn;
 
 public class splash extends AppCompatActivity {
 
@@ -19,10 +19,10 @@ public class splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(splash.this,logIn.class));
+                startActivity(new Intent(splash.this, logIn.class));
                 finish();
             }
-        },4000);
+        },3000);
     }
 
 }

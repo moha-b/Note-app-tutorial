@@ -1,11 +1,9 @@
-package com.example.noteapp;
+package com.example.noteapp.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -14,14 +12,12 @@ import android.view.View;
 
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.noteapp.R;
+import com.example.noteapp.createNote;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
 
-
-public class Home extends AppCompatActivity {
+public class Main extends AppCompatActivity {
 
     FloatingActionButton fab ;
     RecyclerView recyclerView;
@@ -31,38 +27,12 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        Notes[] notes = new Notes[]{
-                new Notes("Greetings","Hello World"),
-                new Notes("Valorant","main kj, chamber maybe sage or kay/o"),
-                new Notes("this just a shit","Completely uesless note with no goal"),
-                new Notes("hmmmm","qew"),
-                new Notes("hmmmm","sdadad"),
-                new Notes("hmmmm","hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"),
-                new Notes("hmmmm","hmmmmmmmmmmmeeemmmmssasdasdmmmmmmmmmmmmmmmmmmmmm"),
-                new Notes("hmmmm","hmmmmmmmmmaaaaaaaaaaaaaaaaaaaaammmmmmmmmmmmmmmmmmmmmmmmmm"),
-                new Notes("hmmmm","hmmmmmmmmmmmmmmssssssmmmmmmmmmmmmmmmmmmmmmmmm"),
-                new Notes("hmmmm","hmmmmmmmmmmmmmmmmmmmmmmmmmmmm"),
-
-        };
-
-        Adapter adapter = new Adapter(notes,Home.this);
-        recyclerView.setAdapter(adapter);
-
-
-
-
-
-
         // TODO: Float Action Button Declaration & Action
         fab = findViewById(R.id.add_note);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this,createNote.class));
+                startActivity(new Intent(Main.this, createNote.class));
                 //replace(new createNote(),R.id.fragment);
             }
         });
@@ -73,6 +43,11 @@ public class Home extends AppCompatActivity {
         nav.add(new MeowBottomNavigation.Model(2,R.drawable.ic_outline_home_24));
         nav.add(new MeowBottomNavigation.Model(3,R.drawable.ic_outline_settings_24));
 
+        if (savedInstanceState == null){
+            replace(new home(),R.id.fragment);
+            //nav.setSelected();
+        }
+
         nav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
@@ -82,7 +57,7 @@ public class Home extends AppCompatActivity {
                         fab.hide();
                         break;
                     case 2:
-                        startActivity(new Intent(Home.this,Home.class));
+                        replace(new home(),R.id.fragment);
                         fab.show();
                         break;
                     case 3:

@@ -1,4 +1,4 @@
-package com.example.noteapp;
+package com.example.noteapp.Registration;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.noteapp.Home.Main;
+import com.example.noteapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -50,7 +52,7 @@ public class signUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Gamed", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(signUp.this, Home.class));
+                            startActivity(new Intent(signUp.this, Main.class));
                         } else {
                             Toast.makeText(getApplicationContext(), "fe 7ahgh 5lat", Toast.LENGTH_SHORT).show();
                         }
@@ -63,7 +65,7 @@ public class signUp extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(signUp.this,logIn.class));
+                startActivity(new Intent(signUp.this, logIn.class));
             }
         });
 
