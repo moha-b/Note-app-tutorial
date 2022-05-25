@@ -12,6 +12,7 @@ import android.view.View;
 
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.noteapp.Home.settings.settings;
 import com.example.noteapp.R;
 import com.example.noteapp.createNote;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
