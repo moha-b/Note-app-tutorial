@@ -14,10 +14,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-1dp"
         android:layout_marginBottom="151dp"
-        android:text="applicationName"
+        android:text="ARk book"
+        android:fontFamily="@font/valorant"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="40sp"
+        />
 
 
 </RelativeLayout>

@@ -46,7 +46,6 @@ public class Main extends AppCompatActivity {
 
         if (savedInstanceState == null){
             replace(new home(),R.id.fragment);
-            //nav.setSelected();
         }
 
         nav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
