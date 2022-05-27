@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home.profile">
+    tools:context=".Home.Profile.profile">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -59,6 +59,7 @@
             app:layout_constraintVertical_bias="0.171">
 
             <TextView
+                android:id="@+id/name_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Saif"
@@ -70,6 +71,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/email_user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Saif Ashraf@gmail.com"
@@ -93,7 +95,7 @@
         app:layout_constraintVertical_bias="0.214">
 
         <Button
-            android:id="@+id/friend"
+            android:id="@+id/friends"
             android:layout_width="320dp"
             android:layout_height="52dp"
             android:layout_marginLeft="45dp"

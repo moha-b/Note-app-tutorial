@@ -1,4 +1,4 @@
-package com.example.noteapp.Home;
+package com.example.noteapp.Home.Profile;
 
 import android.os.Bundle;
 
@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.example.noteapp.R;
@@ -25,7 +27,24 @@ public class profile extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        TextView name = view.findViewById(R.id.name_user);
+        TextView email = view.findViewById(R.id.email_user);
+        Button friends = view.findViewById(R.id.friends);
+        Button myNotes = view.findViewById(R.id.my_note);
 
+        friends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        myNotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
 
         return view;
     }

@@ -52,12 +52,12 @@ public class settings extends Fragment {
 //            }
 //        });
 //
-//        log_out.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Main.class, logIn.class));
-//            }
-//        });
+        log_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), logIn.class));
+            }
+        });
 
 
         return view;
