@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,12 +21,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class Main extends AppCompatActivity {
 
     FloatingActionButton fab ;
-    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
 
         // TODO: Float Action Button Declaration & Action
         fab = findViewById(R.id.add_note);
@@ -44,11 +42,11 @@ public class Main extends AppCompatActivity {
         nav.add(new MeowBottomNavigation.Model(1,R.drawable.ic_outline_person_24));
         nav.add(new MeowBottomNavigation.Model(2,R.drawable.ic_outline_home_24));
         nav.add(new MeowBottomNavigation.Model(3,R.drawable.ic_outline_settings_24));
-
+//when it goes to activity and found nothing bt4a8l replace
         if (savedInstanceState == null){
             replace(new home(),R.id.fragment);
         }
-
+// to hide the button from other fragments
         nav.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
@@ -77,7 +75,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-    }
+    }//bet4a8l el fragments bt5od layout we fragment
     public void replace(Fragment fragment, int layout){
         FragmentManager fg = getSupportFragmentManager();
         FragmentTransaction ft = fg.beginTransaction();

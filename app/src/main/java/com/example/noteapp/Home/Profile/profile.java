@@ -35,14 +35,14 @@ public class profile extends Fragment {
         friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                replace(new friends(),R.id.fragment);
             }
         });
 
         myNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
 

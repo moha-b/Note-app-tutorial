@@ -43,23 +43,15 @@ public class signUp extends AppCompatActivity {
                 String user = signUpUserName.getText().toString().trim();
                 String userPassword = signUpPassword.getText().toString().trim();
 
-//                if (user.isEmpty() || userPassword.isEmpty()){
-//                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();
-//                }else{
-////                    connection with firebase
-                firebaseAuth.createUserWithEmailAndPassword(user, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Gamed", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(signUp.this, Main.class));
-                        } else {
-                            Toast.makeText(getApplicationContext(), "fe 7ahgh 5lat", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                if (user.isEmpty() || userPassword.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"username & password required",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"created succesfully",Toast.LENGTH_SHORT).show();
+//                    connection with firebase
             }
 
+        };
         });
 
         create.setOnClickListener(new View.OnClickListener() {
@@ -70,4 +62,4 @@ public class signUp extends AppCompatActivity {
         });
 
     }
-}
+    }

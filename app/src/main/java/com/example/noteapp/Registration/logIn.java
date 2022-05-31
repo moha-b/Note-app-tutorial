@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.noteapp.Home.Main;
 import com.example.noteapp.R;
@@ -33,14 +34,14 @@ public class logIn extends AppCompatActivity {
                 String user = userName.getText().toString().trim();
                 String userPassword = password.getText().toString().trim();
 
-//                if (user.isEmpty() || userPassword.isEmpty()){
-//                    Toast.makeText(getApplicationContext(),"lol",Toast.LENGTH_SHORT).show();
-//                }else{
-//                    connection with SQLite
-//                }
+                if (user.isEmpty() || userPassword.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"userName & password required",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext()," welcome ",Toast.LENGTH_SHORT).show();
+                }
 
-                Intent intent = new Intent(logIn.this, Main.class);
-                startActivity(intent);
+                startActivity(new Intent(logIn.this, Main.class));
             }
         });
 

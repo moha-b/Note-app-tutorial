@@ -22,7 +22,7 @@ public class splash extends AppCompatActivity {
                 startActivity(new Intent(splash.this, logIn.class));
                 finish();
             }
-        },3000);
+        },2000);
     }
 
 }
