@@ -1,4 +1,4 @@
-package com.example.noteapp.Home;
+package com.example.noteapp.intro;
 
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -13,18 +13,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.noteapp.Notes;
 import com.example.noteapp.R;
+import com.example.noteapp.intro.Images;
+import com.example.noteapp.intro.introduction;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+class imageAdapter extends RecyclerView.Adapter<imageAdapter.ViewHolder> {
 
-    com.example.noteapp.Notes[] Notes;
-    home context;
+    Images[] images;
+    introduction context;
 
-    public Adapter(Notes[] Notes, home activity) {
-        this.Notes = Notes;
+    public imageAdapter(Images[] images, introduction activity) {
+        this.images = images;
         this.context = activity;
     }
 
@@ -44,32 +46,32 @@ class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         int color = getRandomColor();
 
-        holder.noteTitle.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
-        holder.noteContent.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
-        holder.edit.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
-        final Notes notesList = Notes[position];
-        holder.noteTitle.setText(notesList.getTitleNote());
-        holder.noteContent.setText(notesList.getNoteContent());
+//        holder.noteTitle.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
+//        holder.noteContent.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
+//        holder.edit.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
+        Images notesList = Images[position];
+//        holder.noteTitle.setText(notesList.getTitleNote());
+//        holder.noteContent.setText(notesList.getNoteContent());
 
     }
 
     @Override
     public int getItemCount() {
-        return Notes.length;
+        return images.length;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView noteTitle;
-        TextView noteContent;
-        ImageView edit;
-        View card;
+//        TextView noteTitle;
+//        TextView noteContent;
+//        ImageView edit;
+//        View card;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            noteTitle = itemView.findViewById(R.id.note_title);   // note_title
-            noteContent = itemView.findViewById(R.id.note_content); // note_content
-            edit = itemView.findViewById(R.id.edit_note);
+//            noteTitle = itemView.findViewById(R.id.note_title);   // note_title
+//            noteContent = itemView.findViewById(R.id.note_content); // note_content
+//            edit = itemView.findViewById(R.id.edit_note);
         }
     }
     public int getRandomColor(){

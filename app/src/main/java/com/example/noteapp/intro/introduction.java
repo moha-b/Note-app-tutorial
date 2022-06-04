@@ -12,10 +12,10 @@ import com.smarteist.autoimageslider.SliderView;
 public class introduction extends AppCompatActivity {
 
     SliderView slider;
-    int[] images ={
-            R.drawable.splash_background_1,
-            R.drawable.splash_background_2,
-            R.drawable.splash_background_3
+    Images[] images = new Images[]{
+            new Images(R.drawable.splash_background_1),
+            new Images(R.drawable.splash_background_2),
+            new Images(R.drawable.splash_background_3)
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,8 @@ public class introduction extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
 
         slider = findViewById(R.id.Slider);
-        SliderAdapter adapter = new SliderAdapter(images);
-        slider.setSliderAdapter(adapter);
+        imageAdapter imageadapter = new imageAdapter(images,introduction.this);
+        slider.setSliderAdapter(imageadapter);
         slider.setIndicatorAnimation(IndicatorAnimationType.WORM);
         slider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         slider.startAutoCycle();
