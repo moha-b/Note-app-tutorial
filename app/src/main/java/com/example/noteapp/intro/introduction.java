@@ -22,12 +22,12 @@ public class introduction extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        slider = findViewById(R.id.Slider);
-        imageAdapter imageadapter = new imageAdapter(images,introduction.this);
-        slider.setSliderAdapter(imageadapter);
-        slider.setIndicatorAnimation(IndicatorAnimationType.WORM);
-        slider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
-        slider.startAutoCycle();
+//        slider = findViewById(R.id.Slider);
+//        imageAdapter imageadapter = new imageAdapter(images,introduction.this);
+//        slider.setSliderAdapter(imageadapter);
+//        slider.setIndicatorAnimation(IndicatorAnimationType.WORM);
+//        slider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+//        slider.startAutoCycle();
 
     }
 }

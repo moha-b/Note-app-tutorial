@@ -49,7 +49,7 @@ class imageAdapter extends RecyclerView.Adapter<imageAdapter.ViewHolder> {
 //        holder.noteTitle.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
 //        holder.noteContent.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
 //        holder.edit.setBackgroundColor(holder.itemView.getResources().getColor(color,null));
-        Images notesList = Images[position];
+       // Images notesList = Images[position];
 //        holder.noteTitle.setText(notesList.getTitleNote());
 //        holder.noteContent.setText(notesList.getNoteContent());
 
