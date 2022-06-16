@@ -5,4 +5,5 @@
     <item name="logInPassword" type="id" />
     <item name="logInUserName" type="id" />
     <item name="email" type="id" />
+    <item name="recyclerView" type="id" />
 </resources>
